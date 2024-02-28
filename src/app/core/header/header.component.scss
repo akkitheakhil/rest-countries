@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: var(--element-color);
+  padding: 24px 48px;
+
+  .title {
+    font-weight: 800;
+  }
+}

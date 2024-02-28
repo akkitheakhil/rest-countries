@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+// Root variables
+:root {
+  // Base colors
+  --color-white: hsl(0, 0%, 100%);
+  --color-dark-blue: hsl(209, 23%, 22%);
+  --color-dark-blue-1: hsl(207, 26%, 17%);
+  --color-dark-blue-2: hsl(200, 15%, 8%);
+  --color-gray: hsl(0, 0%, 52%);
+  --color-light-gray: hsl(0, 0%, 98%);
+
+
+  // Color definitions
+  --light-bg-color: var(--color-light-gray);
+  --dark-bg-color: var(--color-dark-blue-1);
+  --light-text-color: var(--color-dark-blue-2);
+  --dark-text-color: var(--color-white);
+  --light-element-color: var(--color-white);
+  --dark-element-color: var(--color-dark-blue);
+
+  --background-color: var(--light-bg-color);
+  --text-color: var(--light-text-color);
+  --element-color: var(--light-element-color);
+  --input-color: var(--color-gray);
+}
+
+// Css resets
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+  &[data-theme='dark'] {
+    --background-color: var(--dark-bg-color);
+    --text-color: var(--dark-text-color);
+    --element-color: var(--dark-element-color);
+    --input-color: var(--color-white);
+  }
+
+  &[data-theme='light'] {
+    --background-color: var(--light-bg-color);
+    --text-color: var(--light-text-color);
+    --element-color: var(--light-element-color);
+    --input-color: var(--color-gray);
+  }
+}
