@@ -1,4 +1,11 @@
 <header class="header">
   <h3 class="title">Where in the world?</h3>
-  <button (click)="toggleTheme()">{{ isDarkMode() ? "Dark" : "Light" }}</button>
+  <button
+    app-button
+    buttonType="ghost"
+    buttonSize="medium"
+    (click)="toggleTheme()"
+  >
+    {{ isDarkMode() ? "Dark" : "Light" }} Mode
+  </button>
 </header>

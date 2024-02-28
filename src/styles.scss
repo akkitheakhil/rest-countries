@@ -30,6 +30,7 @@ html {
   box-sizing: border-box;
   font-size: 16px;
   font-family: "Nunito Sans", sans-serif;
+  color-scheme: dark light;
 }
 
 *, *:before, *:after {
@@ -57,6 +58,7 @@ body {
   color: var(--text-color);
 
   &[data-theme='dark'] {
+      color-scheme: dark;
     --background-color: var(--dark-bg-color);
     --text-color: var(--dark-text-color);
     --element-color: var(--dark-element-color);
@@ -64,6 +66,7 @@ body {
   }
 
   &[data-theme='light'] {
+    color-scheme: light;
     --background-color: var(--light-bg-color);
     --text-color: var(--light-text-color);
     --element-color: var(--light-element-color);

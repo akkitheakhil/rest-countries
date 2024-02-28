@@ -1,0 +1,13 @@
+:host {
+  &.custom-button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: var(--text-color);
+
+    &.ghost {
+      background: transparent;
+      font-weight: 600;
+    }
+  }
+}

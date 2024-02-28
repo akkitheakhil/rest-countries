@@ -29,6 +29,7 @@ export class ColorSchemeService {
     const storageListener = () => {
       updateColorScheme();
     };
+
     window.addEventListener('storage', storageListener);
 
     // Cleanup function
@@ -43,5 +44,7 @@ export class ColorSchemeService {
 
   saveNewColorTheme(theme: ColorScheme): void {
     localStorage.setItem(ColorSchemeKey, theme);
+    const event = new Event('storage');
+    window.dispatchEvent(event);
   }
 }

@@ -1,14 +1,21 @@
-import { Component, Signal, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Signal,
+  inject,
+} from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map, tap } from 'rxjs';
+import { ButtonComponent } from '../../shared/components/button/button.component';
 import { ColorSchemeService } from '../color-scheme.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [ButtonComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
   private readonly colorSchemeService = inject(ColorSchemeService);
